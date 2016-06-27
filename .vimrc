@@ -44,11 +44,10 @@ nnoremap E $
 nnoremap $ <nop>
 nnoremap ^ <nop>
 " quick jump to top with g, bottom with v
-" use j and k to jump (j for down, k for up)
-" nnoremap t gg
-" nnoremap g G
-" nnoremap gg <nop>
-" nnoremap G <nop>
+nnoremap t gg
+nnoremap g G
+nnoremap gg <nop>
+nnoremap G <nop>
 
 " jk combo is new escape
 inoremap jk <esc>
