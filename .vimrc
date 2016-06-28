@@ -44,8 +44,9 @@ nnoremap E $
 nnoremap $ <nop>
 nnoremap ^ <nop>
 " quick jump to top with g, bottom with v
-nnoremap t gg
-nnoremap g G
+" <bar> zz scrolls to middle of screen on jump instead of pressing zz after
+nnoremap t gg <bar> zz
+nnoremap g G <bar> zz
 nnoremap gg <nop>
 nnoremap G <nop>
 
@@ -58,14 +59,3 @@ set nowrap              " lines do not wrap visually
 " leader d, quick delete, or leader y quick yank
 nnoremap <leader>d dd
 nnoremap <leader>y yy
-
-" finish this jump function later, zz centers screen
-function MiddleScroll()
-    for lineno in range(t:firstline, t:lastline)
-        let line = getline(lineno)
-        let line = line + 30
-        setline(line)
-    endfor
-endfunction
-
-" command -range MiddleScroll <line1>,<line2>call MiddleScroll()
