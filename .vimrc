@@ -50,6 +50,9 @@ nnoremap g G <bar> zz
 nnoremap gg <nop>
 nnoremap G <nop>
 
+" quickly use tab to jump to different screen splits in vim
+map <Tab> <C-w>w
+
 " jk combo is new escape
 inoremap jk <esc>
 
