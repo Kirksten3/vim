@@ -68,3 +68,6 @@ nnoremap <leader>y yy
 " INDENTION FIXING
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType scss setlocal shiftwidth=2 tabstop=2 softtabstop=2
+" coffeescript indentation doesn't work for some reason...
+autocmd FileType coffeescript setlocal shiftwidth=2 tabstop=2 softtabstop=2
