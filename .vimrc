@@ -35,8 +35,8 @@ nnoremap <leader> t CommandT
 
 " movement
 " move up/down visual line
-nnoremap j gj
-nnoremap k gk
+nnoremap j gj <bar> zz
+nnoremap k gk <bar> zz
 
 " move to beginning/end of line
 nnoremap B ^
