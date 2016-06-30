@@ -28,6 +28,8 @@ set showmatch           " highlight matching braces
 
 " search
 set hlsearch            " highlight searches
+
+" KEY REMAPPING
 " turn off search highlighting with leader and space
 nnoremap <leader><space> :nohlsearch<CR>
 
@@ -62,3 +64,7 @@ set nowrap              " lines do not wrap visually
 " leader d, quick delete, or leader y quick yank
 nnoremap <leader>d dd
 nnoremap <leader>y yy
+
+" INDENTION FIXING
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
