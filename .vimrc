@@ -67,9 +67,10 @@ noremap <leader>d dd
 nnoremap <leader>y yy
 
 " INDENTION FIXING
+" USE :set ft? to check filetype when in a file
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType scss setlocal shiftwidth=2 tabstop=2 softtabstop=2
-" coffeescript indentation doesn't work for some reason...
-autocmd FileType coffeescript setlocal shiftwidth=2 tabstop=2 softtabstop=2
-autocmd FileType embeddedruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType coffee setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType eruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
