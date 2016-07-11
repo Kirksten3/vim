@@ -1,1 +1,1 @@
-au BufRead,BufNewFile *.erb     set filetype=embeddedruby
+" au BufRead,BufNewFile *.erb     set filetype=embeddedruby
