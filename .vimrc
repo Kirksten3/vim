@@ -35,6 +35,7 @@ nnoremap <leader><space> :nohlsearch<CR>
 
 nnoremap <leader> t CommandT
 map <C-n> :NERDTreeToggle<CR>
+noremap <F3> :AutoFormat<CR>
 
 " movement
 " move up/down visual line
@@ -74,3 +75,7 @@ autocmd FileType scss setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType coffee setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType eruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType sh setlocal shiftwidth=4 tabstop=4 softtabstop=4
+
+" Commenting for filetypes
+autocmd FileType ruby map <leader>C B | echo "#"
