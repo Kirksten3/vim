@@ -7,8 +7,11 @@ filetype plugin indent on
 
 let mapleader=","
 
+" set term=xterm-256color
 syntax enable
 let g:solarized_termcolors=256
+" let g:solarized_termtrans=1
+set t_Co=16 
 set background=dark
 colorscheme solarized
 
