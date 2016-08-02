@@ -8,7 +8,8 @@ filetype plugin indent on
 let mapleader=","
 
 syntax enable
-let g:solarized_termcolors=256
+" let g:solarized_termcolors=256
+set t_Co=16
 set background=dark
 colorscheme solarized
 
@@ -49,6 +50,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+nnoremap <C-s> :SyntasticToggleMode<CR>
+
 " movement
 " move up/down visual line
 nnoremap j gj <bar> zz
@@ -73,7 +76,7 @@ map <Tab> <C-w>w
 inoremap jk <esc>
 
 set encoding=utf-8      " encoding for files
-set nowrap              " lines do not wrap visually
+" set nowrap              " lines do not wrap visually
 
 " leader d, quick delete, or leader y quick yank
 noremap <leader>d dd
