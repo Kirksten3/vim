@@ -38,7 +38,6 @@ nnoremap <leader><space> :nohlsearch<CR>
 
 nnoremap <leader> t CommandT
 map <C-n> :NERDTreeToggle<CR>
-noremap <F3> :AutoFormat<CR>
 
 " SYNTASTIC SETTINGS
 set statusline+=%#warningmsg#
@@ -54,20 +53,22 @@ nnoremap <C-s> :SyntasticToggleMode<CR>
 
 " movement
 " move up/down visual line
-nnoremap j gj <bar> zz
-nnoremap k gk <bar> zz
+" nnoremap j gj <bar> zz
+" nnoremap k gk <bar> zz
 
 " move to beginning/end of line
-nnoremap B ^
-nnoremap E $
-nnoremap $ <nop>
-nnoremap ^ <nop>
+nnoremap <leader>e $
+nnoremap <leader>b ^
+" nnoremap B ^
+" nnoremap E $
+" nnoremap $ <nop>
+" nnoremap ^ <nop>
 " quick jump to top with g, bottom with v
 " <bar> zz scrolls to middle of screen on jump instead of pressing zz after
-nnoremap t gg <bar> zz
-nnoremap g G <bar> zz
-nnoremap gg <nop>
-nnoremap G <nop>
+" nnoremap t gg <bar> zz
+"nnoremap g G <bar> zz
+"nnoremap gg <nop>
+"nnoremap G <nop>
 
 " quickly use tab to jump to different screen splits in vim
 map <Tab> <C-w>w
