@@ -1,17 +1,17 @@
 set nocompatible
 filetype off
 
-execute pathogen#infect()
+" execute pathogen#infect()
 
 filetype plugin indent on
 
 let mapleader=","
 
-syntax enable
+" syntax enable
 " let g:solarized_termcolors=256
-set t_Co=16
-set background=dark
-colorscheme solarized
+" set t_Co=16
+" set background=dark
+" colorscheme solarized
 
 set clipboard=unnamed   " allow copying to clipboard
 
@@ -36,20 +36,20 @@ set statusline=%f       " tail of filename
 " turn off search highlighting with leader and space
 nnoremap <leader><space> :nohlsearch<CR>
 
-nnoremap <leader> t CommandT
-map <C-n> :NERDTreeToggle<CR>
+" nnoremap <leader> t CommandT
+" map <C-n> :NERDTreeToggle<CR>
 
 " SYNTASTIC SETTINGS
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 
-nnoremap <C-s> :SyntasticToggleMode<CR>
+" nnoremap <C-s> :SyntasticToggleMode<CR>
 
 " movement
 " move up/down visual line
