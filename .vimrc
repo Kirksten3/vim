@@ -13,6 +13,8 @@ set t_Co=16
 set background=dark
 colorscheme solarized
 
+set noshowcmd           " somehow speeds up cursor scroll speed
+
 set clipboard=unnamed   " allow copying to clipboard
 
 set tabstop=4           " number of spaces per tab
@@ -40,16 +42,20 @@ nnoremap <leader> t CommandT
 map <C-n> :NERDTreeToggle<CR>
 
 " SYNTASTIC SETTINGS
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
 
-nnoremap <C-s> :SyntasticToggleMode<CR>
+"nnoremap <C-s> :SyntasticToggleMode<CR>
+
+"Base64 decode/encode shortcuts
+vnoremap <leader>64d c<c-r>=system('base64 --decode', @")<esc>
+vnoremap <leader>64e c<c-r>=system('openssl base64 -e -A', @")<esc>
 
 " movement
 " move up/down visual line
@@ -72,6 +78,7 @@ nnoremap <leader>b ^
 
 " quickly use tab to jump to different screen splits in vim
 map <Tab> <C-w>w
+map <leader>= <C-w>=
 
 " jk combo is new escape
 inoremap jk <esc>
@@ -92,6 +99,27 @@ autocmd FileType coffee setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType eruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2 softtabstop=2
 autocmd FileType sh setlocal shiftwidth=4 tabstop=4 softtabstop=4
+autocmd FileType typescript setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType xml setlocal shiftwidth=4 tabstop=4 softtabstop=4
+autocmd FileType java setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType json setlocal shiftwidth=2 tabstop=2 softtabstop=2
 
 " Commenting for filetypes
 autocmd FileType ruby map <leader>C B | echo "#"
+
+"in progress below:
+
+"function Base64decode()
+    "let word = expand("<cword>")
+    "echom word
+    ":call system('base64 --decode', word)
+"endfunction
+
+"function Base64encode()
+    "let word = expand("<cword>")
+    "echom word
+    "! system('openssl base64 -e -A', shellescape(word))
+"endfunction
+
+"noremap <leader>64d <C-r>=Base64decode()<CR>
+"noremap <leader>64e <C-r>=Base64encode()<CR>
